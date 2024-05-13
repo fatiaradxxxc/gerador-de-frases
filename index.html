@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Phrase Generator</title>
+    <h1>Gerador de frases muito maneiras!</h1><hr>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;"></div>
+    <button id="generate-button">Gerar frase aleatória</button>
+    <p></p>
+    <div id="phrase"></div>
+<script>
+        const phrases = [
+            "persiga seus sonhos. você nunca vai alcançá-los, mas persiga!",
+            "a vida é um eterno sofrimento. apenas!",
+            "se você quiser, se você se esforçar, se você treinar, se você entar de cabeça, se você se concentrar... nada garante que você vai consegui!",
+            "tá feliz? espera que passa!",
+            "você pode se secar com uma toalha molhada, mas não pode se molhar com uma toalha seca!",
+            "querer comprar algo, e não ter dinheiro, isso é felicidade! ter que batalhar pelas coisas!",
+            "quando uma pessoa diz para você acreditar em você mesmo, você não está acreditando em você mesmo, você está acreditando na pessoa que acredita em você!",
+            "que seu dia seja tão belo e cheiroso como as melhores flores de um jardim!"
+        ];
+
+        function generateRandomPhrase() {
+            const randomIndex = Math.floor(Math.random() * phrases.length);
+            document.getElementById("phrase").innerText = phrases[randomIndex];
+        }
+
+        // Generate a random phrase when the page loads
+        window.onload = generateRandomPhrase;
+
+        // Generate a random phrase when the user clicks the page
+        document.body.onclick = generateRandomPhrase;
+    </script>
+</body>
+</html>
+
